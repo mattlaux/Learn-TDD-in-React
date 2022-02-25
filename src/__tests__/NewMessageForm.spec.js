@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import NewMessageForm from "../components/NewMessageForm";
-import MessageList from "../components/MessageList";
+import NewMessageForm from "../components/NewMessageForm/NewMessageFormContainer";
+import MessageList from "../components/MessageList/MessageListContainer";
 
 afterEach(cleanup);
 

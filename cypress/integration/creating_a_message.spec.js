@@ -4,7 +4,7 @@ describe('Creating a message', () => {
 
         cy.get('[data-cy=messageInput]').type('Test Message');
 
-        cy.get('.button').click();
+        cy.get('[data-cy=submitButton').click();
 
         cy.get('[data-cy="messageInput"]').should('have.value', '');
 

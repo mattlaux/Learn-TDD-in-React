@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, cleanup } from "@testing-library/react";
-import { default as MessageList } from "../components/MessageList";
+import { default as MessageList } from "../components/MessageList/MessageListContainer";
 
 afterEach(cleanup);
 
