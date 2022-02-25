@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
 
-const NewMessageForm = () => {
-   let [inputText, setInputText] = useState('');
+const NewMessageForm = ({ onSend }) => {
+   let [inputText, setInputText] = useState('New Message');
 
    const handleTextChange = e => {
        setInputText(e.target.value);
    };
 
-   const handleSend = () => {
-       setInputText('');
+   const handleSend = () => {  
+    onSend(inputText);
+    setInputText('');
    }
    
     return (
         <div>
             <input 
                 type="text"
-                data-testid="messageText"
                 value={inputText}
                 onChange={handleTextChange}
+                class="inputField"
+                data-cy="messageInput"
             />
             <button
-                data-testid="sendButton"
                 onClick={handleSend}
+                class="button"
             >
                 Send
             </button>

@@ -1,10 +1,18 @@
-import React from 'react';
-import { default as NewMessageForm } from './components/NewMessageForm';
+import React, { useState } from 'react';
+import NewMessageForm from './components/NewMessageForm';
+import MessageList from './components/MessageList';
 
 const App = () => {
+  let [messageList, setMessageList] = useState(['test1','test2','test3']);
+
+  const handleSend = newMessage => setMessageList((prev) => {
+    return [newMessage, ...prev];
+  });
+  
   return (
     <div>
-      <NewMessageForm />
+      <NewMessageForm onSend={handleSend}/>
+      <MessageList messages={messageList} />
     </div>
   );
 };

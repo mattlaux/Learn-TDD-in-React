@@ -2,15 +2,12 @@ describe('Creating a message', () => {
     it('Displays the message in the list', () => {
         cy.visit('http://localhost:3000');
 
-        cy.get('[data-testid="messageText"]')
-          .type('New message');
+        cy.get('[data-cy=messageInput]').type('Test Message');
 
-        cy.get('[data-testid="sendButton"]')
-          .click();
+        cy.get('.button').click();
 
-        cy.get('[data-testid="messageText"]')
-          .should('have.value', '');
+        cy.get('[data-cy="messageInput"]').should('have.value', '');
 
-        cy.contains('New message');
+        cy.contains('New MessageTest Message');
     });
 });
