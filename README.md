@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+This project has good examples of Cypress. Keep this repo until more quality examples of Cypress.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
